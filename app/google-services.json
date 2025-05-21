@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "736808024585",
+    "project_id": "flavourride-9d7de",
+    "storage_bucket": "flavourride-9d7de.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736808024585:android:016941c5b2e707b19b56d8",
+        "android_client_info": {
+          "package_name": "com.example.falvourride"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPnTcnXFk8vN1iCrSslQd__LbPldWA4xE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
