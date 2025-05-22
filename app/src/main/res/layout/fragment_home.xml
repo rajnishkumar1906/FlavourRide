@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- Location Bar (Fixed) -->
+    <!-- Location Bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,7 +18,8 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/location"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Location icon" />
 
         <TextView
             android:id="@+id/location"
@@ -31,11 +33,12 @@
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:src="@drawable/flvrd" />
+            android:src="@drawable/img_1"
+            android:contentDescription="App logo" />
     </LinearLayout>
 
     <!-- Scrollable Food Content -->
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -52,9 +55,10 @@
                 android:id="@+id/bannerImage"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginTop="16dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/banner" />
+                android:src="@drawable/banner1"
+                android:layout_marginVertical="20dp"
+                android:contentDescription="Banner image" />
 
             <!-- Title -->
             <TextView
@@ -66,11 +70,12 @@
                 android:layout_marginTop="16dp"
                 android:paddingStart="4dp" />
 
-            <!-- Row 1 -->
+            <!-- Horizontal scroll of dishes -->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp">
+                android:layout_marginTop="12dp"
+                android:overScrollMode="always">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -82,38 +87,35 @@
                         android:layout_height="120dp"
                         android:layout_margin="8dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/pizza" />
+                        android:src="@drawable/pizza"
+                        android:contentDescription="Pizza" />
 
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_margin="8dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/burger" />
+                        android:src="@drawable/burger"
+                        android:contentDescription="Burger" />
 
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_margin="8dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/cold_drink" />
+                        android:src="@drawable/cold_drink"
+                        android:contentDescription="Cold Drink" />
 
                 </LinearLayout>
             </HorizontalScrollView>
-            <LinearLayout
+
+            <!-- RecyclerView below -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/foods"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <FrameLayout
-                    android:background="@drawable/sandwich"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp">
-                    <Button
-                        android:text="Add + "
-                        android:backgroundTint="@color/maroon"
-                        android:layout_width="100dp"
-                        android:layout_height="40dp"/>
-                </FrameLayout>
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>
