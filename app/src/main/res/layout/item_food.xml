@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:scaleType="centerCrop"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"/>
 
         <TextView
             android:id="@+id/foodName"
@@ -28,23 +28,14 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="#333"
-            android:layout_marginBottom="4dp" />
-
-        <TextView
-            android:id="@+id/foodPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="₹0.00"
-            android:textSize="16sp"
-            android:textColor="#666"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"/>
 
         <Button
             android:id="@+id/addButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add to order list +"
+            android:text="Add +"
             android:backgroundTint="@color/maroon"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
